@@ -21,7 +21,7 @@ def test_field_requirement(create_account_page):
 
 @allure.feature("Registration page")
 @allure.story("Registration page")
-@allure.title("Create new customer account")
+@allure.title("Create new customer account.")
 def test_create_new_customer(create_account_page):
     """Тест регистрации нового пользователя"""
     create_account_page.open_page()
