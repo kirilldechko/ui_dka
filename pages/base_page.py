@@ -17,3 +17,15 @@ class BasePage:
 
     def find_all_elements(self, locator: tuple):
         return self.driver.find_elements(*locator)  # функция поиска элементов
+
+    def check_elem_name_value(self, elem_name, elem_path):  # проверка данных введенных в поле
+        search_fild = self.find_elem(elem_path)
+        assert search_fild.get_attribute("value") == elem_name
+
+    def check_elem_name_text(self, elem_name, elem_path):  # проверка данных введенных в поле
+        search_fild = self.find_elem(elem_path)
+        assert search_fild.text == elem_name
+
+    def check_header_title(self, elem_name, elem_path):  # проверка названия страницы
+        search_fild = self.find_elem(elem_path)
+        assert search_fild.text == elem_name
