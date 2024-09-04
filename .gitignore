@@ -1,5 +1,5 @@
 .idea
 venv
 .pytest_cach
-__pycache__
+__pycache__/
 .allure-results
