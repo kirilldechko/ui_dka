@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 
-
 add_button = (By.XPATH, "//a[@class='product-item-link' and contains(text(),'Ana Running Short')]"
                         "//..//following-sibling::div[4]//div//div//form/button/span")
-added_item_in_cart = (By.XPATH, "//span[@class='counter-number' and text()='1']")
+added_item_in_cart = (By.XPATH, "//span[@class='counter-number']")
 
 
 def commodity_path(name):
@@ -27,5 +26,10 @@ def color_button(color, commodity_name):
 
 
 def selected_color(color, commodity_name):
-    return (By.XPATH, f"//a[contains(text(),'{commodity_name}')]//..//following-sibling::div[3]/div[2]"
-                      f"//div[@class='swatch-option color selected' and @aria-label='{color}']")
+    return (By.XPATH, f"//a[contains(text(),'{commodity_name}')]//..//following-sibling::div[3]/div[2]//"
+                      f"div[@class='swatch-option color selected' and @aria-label='{color}']")
+
+
+def success_text(text):
+    return (By.XPATH, f"//div[contains(@data-bind, 'html: $parent.prepareMessageForHtml(message.text)') "
+                      f"and contains(text(), 'You added {text} to your')]")

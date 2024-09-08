@@ -22,9 +22,8 @@ class BasePage:
         search_fild = self.find_elem(elem_path)
         assert search_fild.get_attribute("value") == elem_name
 
-    def check_elem_name_text(self, elem_name, elem_path):  # проверка данных введенных в поле
-        search_fild = self.find_elem(elem_path)
-        assert search_fild.text == elem_name
+    def check_elem_by_text(self, compare_elem_1, compare_elem_2):  # проверка данных введенных в поле
+        assert compare_elem_1 == compare_elem_2
 
     def check_header_title(self, elem_name, elem_path):  # проверка названия страницы
         search_fild = self.find_elem(elem_path)

@@ -1,5 +1,6 @@
 from pages.create_account import CreateAccount
 from pages.eco_friendly_page import EcoFriendly
+from pages.home_page import HomePage
 from pages.sale_page import SalePage
 from selenium import webdriver
 from pages.user_account_page import NewUserPage
@@ -38,3 +39,8 @@ def new_user_page(driver):
 @pytest.fixture()  # инициализируем страницу товара
 def commodity_page(driver):
     return CommodityPage(driver)
+
+
+@pytest.fixture()  # инициализируем домашнюю страницу
+def home_page(driver):
+    return HomePage(driver)

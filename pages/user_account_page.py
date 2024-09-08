@@ -1,10 +1,10 @@
 import random
 import allure
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import BasePage
 from pages.locators import user_account_locators as ual
-from pages import data_tests as dt
 
 
 class NewUserPage(BasePage):  # этот класс наследуется из BasePage
