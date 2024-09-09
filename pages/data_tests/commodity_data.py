@@ -1,1 +1,2 @@
-commodity_name = 'Fiona Fitness Short'
+commodity_name = 'Ana Running Short'
+commodity_page_url = "/ana-running-short.html"

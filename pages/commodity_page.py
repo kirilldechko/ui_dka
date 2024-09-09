@@ -1,11 +1,12 @@
 import allure
 
 from pages.base_page import BasePage
+from pages.data_tests.commodity_data import commodity_page_url
 from pages.locators import commodity_page_locators as loc
 
 
 class CommodityPage(BasePage):
-    page_url = "/ana-running-short.html"
+    page_url = commodity_page_url
 
     @allure.step("Проверка наименования товара на странице товара")
     def check_commodity_name(self, commodity_name):
